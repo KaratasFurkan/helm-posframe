@@ -106,6 +106,11 @@ When 0, no border is shown."
   :group 'helm-posframe
   :type 'number)
 
+(defcustom helm-posframe-border-color nil
+  "The border color used by helm-posframe."
+  :group 'helm-posframe
+  :type 'string)
+
 (defcustom helm-posframe-parameters nil
   "The frame parameters used by helm-posframe."
   :group 'helm-posframe
@@ -128,6 +133,7 @@ Argument BUFFER."
          :font helm-posframe-font
          :override-parameters helm-posframe-parameters
 	 :internal-border-width helm-posframe-border-width
+         :internal-border-color helm-posframe-border-color
          :respect-header-line t
          (funcall helm-posframe-size-function)))
 
